@@ -1,0 +1,85 @@
+:root {
+    --bg-color: #f4f5f7;
+    --column-bg: #ebecf0;
+    --card-bg: #ffffff;
+    --text-main: #172b4d;
+    --accent-color: #0052cc;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.column {
+    background-color: var(--column-bg);
+    border-radius: 8px;
+    flex: 1;
+    min-width: 280px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-header {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #5e6c84;
+}
+
+.task-list {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.task {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    cursor: grab;
+}
+
+.task.is-dragging {
+    opacity: 0.4;
+    border: 2px dashed var(--accent-color);
+}
+
+.add-task-container {
+    margin-top: 1rem;
+    display: flex;
+    gap: 5px;
+}
+
+.add-task-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-task-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
