@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Project Board</h1>
+
+    <div class="kanban-board">
+        <div class="column">
+            <div class="column-header">Task</div>
+            <div class="task-list" id="todo-list">
+                <div class="task" draggable="true">Design System Update</div>
+                <div class="task" draggable="true">API Documentation</div>
+            </div>
+            
+            <div class="add-task-container">
+                <input type="text" class="add-task-input" id="new-task-input" placeholder="New task...">
+                <button class="add-task-btn" id="add-btn">Add</button>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="column-header">In Progress</div>
+            <div class="task-list" id="inprogress-list">
+                <div class="task" draggable="true">Authentication Logic</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="column-header">Done</div>
+            <div class="task-list" id="done-list">
+                <div class="task" draggable="true">Initial Commit</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
